@@ -1,0 +1,121 @@
+ 
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* //Content will take overall space with padding and margin inside the same box with content. */
+        }
+
+    
+ body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000000e3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ .reg-contain {
+    
+    width: 360px;
+    min-height: 36%;
+    padding: 18px;
+    background-color: #292929;
+    border-radius: 18px;
+    box-shadow: 0 0 10px #0a0a0a;
+    color: aliceblue;
+    
+ }
+
+ .reg-contain h1 {
+    margin: 0 auto;
+    color: #60f2b8;
+    text-align: center;
+    margin-bottom: 5px;
+ }
+
+ .form-input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-contain form {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+ }
+
+.form-contain div input,
+#form-container div select {
+    color: white;
+}
+
+.form-contain div input {
+   width: 100%;
+   padding: 9px;
+   color: #ffffff;
+   border-radius: 5px;
+   border: none;
+   background-color: #151515;
+   caret-color: white;
+ 
+ }
+
+.form-contain div select {
+   width: 100%;
+   padding: 9px;
+   border-radius: 5px;
+   border: none;
+   background-color: #151515;
+   color: aliceblue;
+ }
+
+.form-contain button {
+    min-width: 36%;
+    padding: 9px;
+    border-radius: 9px;
+    border: none;
+    margin: 0 auto;
+    margin-top: 5px;
+    background: linear-gradient(to left, #60f2b8, #62b0f1);
+    font-weight: 500;
+    box-shadow: 3px 5px 10px #0d0d0d;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.form-contain button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px #111111;
+    opacity: 0.95;
+}
+ 
+.form-contain button:active {
+    transform: translateY(1px);
+}
+
+.status-msg {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 14px;
+    min-height: 20px;
+}
+
+.status-msg a {
+    text-decoration: none;
+    color: #276ff5;
+}
+
+.success {
+    color: #60f2b8;
+}
+
+.error {
+    color: #ff6b6b;
+}
