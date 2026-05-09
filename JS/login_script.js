@@ -40,7 +40,7 @@ formAction.addEventListener('submit', async (e) => {
         statusMsg.classList.add("success")
         formAction.reset()
         localStorage.setItem("token", data.data.accessToken);
-         window.location.replace("../HTML/profile.html");
+         window.location.replace("../profile.html");
     } else {
         statusMsg.innerText = data.message || "Something went wrong ❌"
         statusMsg.classList.add("error")
@@ -52,7 +52,7 @@ formAction.addEventListener('submit', async (e) => {
         statusMsg.classList.add("error")
     } finally {
         loginBtn.innerText = "Login"
-    loginBtn.disabled = false
+        loginBtn.disabled = false
     }
 
     

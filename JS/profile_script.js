@@ -2,7 +2,7 @@ const token = localStorage.getItem("token");
 
 if (!token) {
 
-    window.location.replace("../HTML/login.html");
+    window.location.replace("../login.html");
 
 }
 
@@ -25,7 +25,7 @@ const logoutBtn = document.getElementById("logout-btn")
 
         localStorage.removeItem("token");
 
-        window.location.replace("../HTML/login.html");
+        window.location.replace("../login.html");
 
     }
         return response.json()
@@ -44,7 +44,7 @@ const logoutBtn = document.getElementById("logout-btn")
 
     localStorage.removeItem("token");
 
-    window.location.replace("../HTML/login.html");
+    window.location.replace("../login.html");
 
 });
 

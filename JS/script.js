@@ -42,7 +42,7 @@ formAction.addEventListener('submit', async (e) => {
         statusMsg.innerText = "User Registered Successfully ✅"
         statusMsg.classList.add("success")
         formAction.reset()
-        window.location.replace("../HTML/login.html");
+        window.location.replace("../login.html");
     } else {
         statusMsg.innerText = data.message || "Something went wrong ❌"
         statusMsg.classList.add("error")
