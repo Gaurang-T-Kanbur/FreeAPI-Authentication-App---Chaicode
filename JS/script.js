@@ -36,25 +36,26 @@ formAction.addEventListener('submit', async (e) => {
 
     const data = await response.json()
 
-    console.log('====================================');
-    console.log(data);
-    console.log('====================================');
+    statusMsg.classList.remove("success", "error")
 
     if(response.ok) {
         statusMsg.innerText = "User Registered Successfully ✅"
         statusMsg.classList.add("success")
         formAction.reset()
-        window.location.href = "http://127.0.0.1:5500/AUTH/login.html";
+        window.location.replace("../HTML/login.html");
     } else {
         statusMsg.innerText = data.message || "Something went wrong ❌"
         statusMsg.classList.add("error")
     }
         
     } catch (error) {
-        console.error(error);
-    }
+       statusMsg.classList.remove("success", "error")
+        statusMsg.innerText = "Network Error ❌"
+        statusMsg.classList.add("error")
+    }finally {
 
-    registerBtn.innerText = "Register"
-    registerBtn.disabled = false
+        registerBtn.innerText = "Register"
+        registerBtn.disabled = false
+    }
     
 })

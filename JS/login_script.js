@@ -1,5 +1,4 @@
 const formAction = document.getElementById('login-form')
-const email = document.getElementById('email')
 const username = document.getElementById('login-username')
 const password = document.getElementById('login-password')
 const statusMsg = document.getElementById('login-message')
@@ -34,25 +33,27 @@ formAction.addEventListener('submit', async (e) => {
     })
 
     const data = await response.json()
-
-    console.log('====================================');
-    console.log(data);
-    console.log('====================================');
+  statusMsg.classList.remove("success", "error")
 
     if(response.ok) {
         statusMsg.innerText = "User Logged In Successfully ✅"
         statusMsg.classList.add("success")
         formAction.reset()
+        localStorage.setItem("token", data.data.accessToken);
+         window.location.replace("../HTML/profile.html");
     } else {
         statusMsg.innerText = data.message || "Something went wrong ❌"
         statusMsg.classList.add("error")
     }
         
     } catch (error) {
-        console.error(error);
+        statusMsg.classList.remove("success", "error")
+        statusMsg.innerText = "Network Error ❌"
+        statusMsg.classList.add("error")
+    } finally {
+        loginBtn.innerText = "Login"
+    loginBtn.disabled = false
     }
 
-    loginBtn.innerText = "Login"
-    loginBtn.disabled = false
     
 })
